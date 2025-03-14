@@ -22,5 +22,6 @@ pipeline {
                     test -f jenkins-demo/build/index.html
                 '''
             }
+        }
     }
 }
