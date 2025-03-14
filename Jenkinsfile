@@ -23,6 +23,8 @@ pipeline {
                         echo "file exists"
                     else
                         echo "file not exists"
+
+                    fi
                     test -f jenkins-demo/build/index.html
                 '''
             }
