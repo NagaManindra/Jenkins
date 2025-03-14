@@ -24,7 +24,7 @@ pipeline {
                     else
                         echo "file not exists"
                     fi
-                    
+                    cat jenkins-demo/build/index.html
                     cd jenkins-demo
                     npm test
 
