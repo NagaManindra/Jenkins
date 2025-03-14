@@ -25,6 +25,7 @@ pipeline {
                         echo "file not exists"
                     fi
                     
+                    cd jenkins-demo
                     npm test
 
                 '''
