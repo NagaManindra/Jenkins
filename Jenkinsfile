@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image "node:18-alpine"
+            reuseNode yes
         }
     }
 
@@ -14,5 +15,12 @@ pipeline {
                 '''    
             }
         }
+
+        stage('test') {
+            steps {
+                sh'''
+                    test -f jenkins-demo/build/index.html
+                '''
+            }
     }
 }
