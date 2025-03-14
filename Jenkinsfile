@@ -19,6 +19,10 @@ pipeline {
         stage('test') {
             steps {
                 sh'''
+                    if [-e jenkins-demo/build/index.html]; then
+                        echo "file exists"
+                    else
+                        echo "file not exists"
                     test -f jenkins-demo/build/index.html
                 '''
             }
