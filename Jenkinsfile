@@ -44,7 +44,8 @@ pipeline {
                 sh '''
                     cd jenkins-demo
                     npm i -g serve
-                    serve -s build
+                    serve -s build &
+                    sleep 10
                     npm playwright test
                 '''
             }
