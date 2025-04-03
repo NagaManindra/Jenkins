@@ -11,7 +11,9 @@ pipeline {
             steps {
                 sh'''
                     cd jenkins-demo
-                    npm run build
+                    npm install --force
+                    npm start &
+                    sleep 10
                 '''    
             }
         }
